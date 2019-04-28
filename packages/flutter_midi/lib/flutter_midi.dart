@@ -50,7 +50,6 @@ class FlutterMidi {
     @required int midi,
   }) async {
     final Map<dynamic, dynamic> mapData = <dynamic, dynamic>{};
-    print("Pressed: $midi");
     mapData["note"] = midi;
     final String result =
         await _channel.invokeMethod('stop_midi_note', mapData);
@@ -64,7 +63,6 @@ class FlutterMidi {
     @required int midi,
   }) async {
     final Map<dynamic, dynamic> mapData = <dynamic, dynamic>{};
-    print("Pressed: $midi");
     mapData["note"] = midi;
     return await _channel.invokeMethod('play_midi_note', mapData);
   }
